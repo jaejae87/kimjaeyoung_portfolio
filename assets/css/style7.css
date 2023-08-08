@@ -742,10 +742,10 @@ z-index: 12;
     background-size: cover;
     background-position: center center;
 }
-.gif-icon1 {background-image: url('/포트폴리오0804/img/icon/icon01.gif')}
-.gif-icon2 {background-image: url('/포트폴리오0804/img/icon/icon02.gif');}
-.gif-icon3 {background-image: url('/포트폴리오0804/img/icon/icon03.gif');}
-.gif-icon4 {background-image: url('/포트폴리오0804/img/icon/icon04.gif');}
+.gif-icon1 {background-image: url('../../img/icon/icon01.gif');}
+.gif-icon2 {background-image: url('../../img/icon/icon02.gif');}
+.gif-icon3 {background-image: url('../../img/icon/icon03.gif');}
+.gif-icon4 {background-image: url('../../img/icon/icon04.gif');}
 .about-icon li dt {
     padding: 1.2rem 0;
     font-size: 2rem;
