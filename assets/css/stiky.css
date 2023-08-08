@@ -1,0 +1,112 @@
+.clearfix::after{
+  content:"";display: block;clear: both;
+}
+img{width: 100%;}
+
+.top_box{height: 500px; background-color: #080808;
+display: flex; justify-content: center; align-items: center;
+}
+.top_box h2{
+  font-size: 80px; color: #333; 
+}
+
+.fix_motion{background-color: #080808;}
+.fix_motion .tit{
+  color: #333; text-align: center;
+font-size: 200px; margin-bottom: 170px;
+}
+
+
+/* sticky-->부모들(조상)중에 overflow:hidden이 있으면안됨
+position:sticky는 내 부모의 높이가 지나갈때까지
+화면에 고정됨
+스크롤이 position:sticky의 영역의 부모에 도착하기 전까지는
+poistion:static처럼 행동하다가 
+도착하기 후에는 poistion:fixed처럼 행동한다.
+*/
+.inner{max-width: 1100px; margin: 0 auto;}
+.text_box{float: left; width: 50%;}
+.device_box{float: left; width: 50%;}
+
+
+.text_box{padding-top: 400px;} 
+.text_box p{color: #333;
+font-size: 36px; max-width: 80%;
+transition: 0.3s;
+} 
+
+.text_box p.text01{}
+.text_box p.text02{margin-top: 400px;}
+.text_box p.text03{margin-top: 400px;}
+.text_box p.text04{margin-top: 400px;margin-bottom: 500px;}
+
+.text_box p.text01.active{color: #fff;}
+.text_box p.text02.active{color: #fff;}
+.text_box p.text03.active{color: #fff;}
+.text_box p.text04.active{color: #fff;}
+
+
+.device_box{position: sticky; 
+width: 50%; top: 50%; transform: translateY(-50%);
+left: 0;
+}
+.device_box .watch_img{}
+.device_box .watch_img{ width: 240px; height: 409px; 
+margin: 0 auto;position: relative;
+}
+.device_box .watch_img .img_device{position: absolute;
+left: 0; top: 0; right: 0; bottom: 0; z-index: 20;}
+
+.device_box .slide_wrap{width: 195px; height: 237px; 
+position: absolute;     
+left: 17px;top: 89px;
+overflow: hidden;
+}
+.device_box .slide_wrap .slide{ width: 780px; transition: 0.5s;}
+.device_box .slide_wrap .slide figure{width: 195px; float: left; }
+
+
+
+@media (max-width:1024px){
+  .fix_motion .fix_wrap{height: 3000px;}/* //모바일버전에서 스크롤거리설정 */
+  .fix_motion .fix_wrap .tit{font-size: 54px; margin:auto;}
+  .fix_motion .fix_wrap .text_box {
+      float: none;
+      position: sticky;
+      left: 0;
+      top: 0;
+      width: 100%;
+      padding-top: 100px;
+  }
+  .fix_motion .fix_wrap .text_box p{
+      position: absolute;
+      left: 0; top: 100px;
+      width: 100%; max-width:100%;
+      padding: 0 20px;
+      font-size: 18px;
+      text-align: center;
+      box-sizing: border-box;
+      opacity: 0;
+  }
+  .fix_motion .fix_wrap .text_box p.active{opacity:1}
+  .fix_motion .fix_wrap .text_box p.text02 {margin-top: 0px;}
+  .fix_motion .fix_wrap .text_box p.text03 {margin-top: 0px;}
+  .fix_motion .fix_wrap .text_box p.text04 {margin-top: 0px;
+  margin-bottom: 0;}
+
+  .fix_motion .fix_wrap .device_box{
+      top: calc(100vh - 360px); width: 100%; margin-top: 100px;}
+  .fix_motion .fix_wrap .device_box .watch_img {
+      width: 160px; height: 272px;}
+  .fix_motion .fix_wrap .device_box .watch_img .slide_wrap{
+      width: 120px; top: 66px; height: 146px;
+  }
+  .fix_motion .fix_wrap .device_box .watch_img .slide_wrap .slide{
+      width: 480px;
+  }
+  .fix_motion .fix_wrap .device_box .watch_img .slide_wrap .slide figure{
+      width:120px
+  }
+
+
+}
